@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.one {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(237, 22, 245, 0.4)),
+    url("./ps.jpg") no-repeat;
+}
+.two {
+  background: linear-gradient(rgba(168, 242, 252, 0.2), rgba(0, 0, 0, 0.4)),
+    url("./xbox.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.content {
+  text-align: center;
+}
+button {
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.one button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  opacity: 0;
+  background: rgba(237, 22, 245, 0.6);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+
+.one button:hover::before {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  transition: 0.3s all ease;
+}
+.two button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  opacity: 0;
+  background: rgba(17, 14, 17, 0.6);
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+
+.two button:hover::before {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  transition: 0.3s all ease;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+}
